@@ -1,0 +1,61 @@
+.hero-section {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+  position: absolute;
+  z-index: 10;
+}
+/* Responsive Grid */
+.binary-wall {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(1.5vw, 1fr));
+  grid-auto-rows: 1.5vw;
+  gap: 0.3vw;
+  font-size: 1vw;
+  color: #423329;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  user-select: none;
+}
+
+/* Binary Digit Styling */
+.binary-digit {
+  text-align: center;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+/* Hover Glow Classes */
+.binary-digit.active {
+  color: #ffffff;
+  text-shadow: 0 0 20px #ff9900, 0 0 30px #ff9900;
+  transform: scale(1.3);
+}
+
+.binary-digit.nearby-1 {
+  color: #ffdab0;
+  text-shadow: 0 0 30px #b58316, 0 0 10px #b58316;
+  transform: scale(1.3);
+}
+
+.binary-digit.nearby-2 {
+  color: #ffe4a1;
+  text-shadow: 0 0 15px #ffd500, 0 0 5px #ffd000;
+  transform: scale(1.1);
+}
+
+.binary-digit.nearby-3 {
+  color: #ffd072;
+  text-shadow: 0 0 8px #ffc400;
+  transform: scale(1.05);
+}
+
+.binary-digit.nearby-4 {
+  color: #a87341;
+  text-shadow: 0 0 4px #aa4d00;
+  transform: scale(1.02);
+}
