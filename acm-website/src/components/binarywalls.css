@@ -1,12 +1,10 @@
 .hero-section {
   width: 100vw;
-  height: 100vh;
-  background-color: black;
+  height: 90vh; /* Reduced to 90% of the viewport height */
   overflow: hidden;
   position: absolute;
-  z-index: 10;
 }
-/* Responsive Grid */
+
 .binary-wall {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(1.5vw, 1fr));
@@ -15,18 +13,47 @@
   font-size: 1vw;
   color: #423329;
   width: 100vw;
-  height: 100vh;
+  height: 90vh; /* Match the hero section height */
   position: absolute;
   top: 0;
   left: 0;
   user-select: none;
 }
 
+.binary-wall-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .binary-wall {
+    grid-template-columns: repeat(auto-fill, minmax(3vw, 1fr));
+    grid-auto-rows: 3vw;
+    font-size: 2vw;
+    gap: 0.5vw;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .binary-wall {
+    grid-template-columns: repeat(auto-fill, minmax(5vw, 1fr));
+    grid-auto-rows: 5vw;
+    font-size: 3vw;
+    gap: 1vw;
+  }
+}
+
 /* Binary Digit Styling */
 .binary-digit {
   text-align: center;
   transition: all 0.3s ease;
-  z-index: 1;
 }
 
 /* Hover Glow Classes */

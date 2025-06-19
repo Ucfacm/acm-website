@@ -135,15 +135,43 @@ const BinaryWall: React.FC = () => {
   }, []);
 
   return (
-    <section className="hero-section" aria-hidden="true">
+    <section className="hero-section z-0" aria-hidden="true">
       <div
         className="binary-wall"
         ref={binaryWallRef}
         aria-hidden="true"
         tabIndex={-1}
       ></div>
+  
+      <div className="binary-wall-gradient" aria-hidden="true">
+        <svg
+          width="1440"
+          height="375"
+          viewBox="0 0 1440 375"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          className='w-screen h-auto'
+        >
+          <rect width="1445" height="375" fill="url(#paint0_linear_31_82)" />
+          <defs>
+            <linearGradient
+              id="paint0_linear_31_82"
+              x1="722.5"
+              y1="0"
+              x2="722.5"
+              y2="375"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stopColor="#111010" stopOpacity="0" />
+              <stop offset="1" stopColor="#181818" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
     </section>
   );
+  
 };
 
 export default BinaryWall;

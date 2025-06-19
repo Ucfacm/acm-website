@@ -1,13 +1,14 @@
 'use client';
 import React, { useState, useEffect } from "react";
-import { HoverBorderGradient } from "./ui/hover-border-gradient";
+import { SpinningBorderButton } from "./ui/spinning-border-button";
+import { DiscordButton } from "./ui/discord-button";
 
 const Hero = () => {
   const words = [
-    "is innovative",
+    " is innovative",
     "creates opportunities",
     "supports you",
-    "helps you develop"
+    " helps you develop"
   ];
 
   const [typingText, setTypingText] = useState<string>("");
@@ -44,7 +45,7 @@ const Hero = () => {
           setTimeout(() => {
             setIsDeleting(true);
             setPause(false);
-          }, 1000); // Wait for 1 second before deleting
+          }, 1000); 
         }
       }
     }, typingSpeed);
@@ -65,27 +66,27 @@ const Hero = () => {
   }, [charIndex, pause, wordIndex]);
 
   return (
-    <div className="relative flex flex-col items-start justify-center h-full text-left lg:m-24 max-lg:m-12 max-lg:items-center max-lg:text-center pt-12 max-sm:px-6">
-      <h1 className="font-catamaran text-5xl font-black md:text-7xl focus:border-b-gray-500">
-        Association for<br />Computing Machinery
-      </h1>
-      <p className="text-lg md:text-2xl mt-4 font-bmono text-white">
-        A club that <span className="italic text-yellow-400">{typingText}<span className={`blink ${cursorVisible ? "visible" : ""} not-italic font-extralight`}>|</span></span>
-      </p>
-      <div className="mt-8 flex gap-4">
-        <HoverBorderGradient
-          containerClassName="rounded-full"
-          as="button"
-          className="font-bmono text-sm text-yellow-500 backdrop-blur-sm flex items-center space-x-2"
-        >
-          <span>Register</span>
-        </HoverBorderGradient>
-        <a href="https://discord.gg/cYJWFBswq7" target="_blank" rel="noopener noreferrer">
-          <button className="border-gray-300 border-1 group relative inline-flex font-bmono text-sm items-center justify-center overflow-hidden rounded-full backdrop-blur-xs bg-black/5 px-4 py-2 cursor-pointer font-medium text-neutral-200">
-            <span>Discord</span>
-            <div className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]"><div className="relative h-full w-8 bg-white/20"></div></div></button></a>
-      </div>
-    </div>
+    <>
+      <div className="-translate-y-1/12 
+        relative flex flex-col items-start justify-center h-screen text-left max-sm:mx-2 lg:max-2xl:mx-24 max-lg:mx-12 max-lg:items-center max-lg:text-center  max-sm:px-6 2xl:pt-20">
+          <div>
+            <h1 className="font-catamaran max-sm:text-4xl text-5xl font-black md:text-7xl 2xl:text-8xl">
+              Association for<br />Computing Machinery
+            </h1>
+            <p className=" text-lg max-sm:text-sm md:text-2xl mt-4 font-bmono text-white 2xl:text-3xl 2xl:mt-8">
+              A club that <span className="italic text-yellow-400">{typingText}
+                <span className={`not-italic font-extralight ${cursorVisible ? "opacity-100" : "opacity-0"}`}>|</span>
+              </span>
+            </p>
+            <div className="mt-8 flex gap-4">
+              <SpinningBorderButton className="hover:shadow-[0_0_25px_rgba(253,216,53,0.8)] hover:shadow-yellow-600/60 duration-200">
+                Register
+              </SpinningBorderButton>
+              <DiscordButton className="hover:shadow-[0_0_25px_rgba(0,0,0,0.8)] hover:shadow-white/40 duration-200" />
+            </div>
+          </div>
+        </div>
+        </>
   );
 };
 
