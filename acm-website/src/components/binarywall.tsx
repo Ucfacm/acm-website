@@ -135,7 +135,7 @@ const BinaryWall: React.FC = () => {
   }, []);
 
   return (
-    <section className="hero-section z-0" aria-hidden="true">
+    <section className="hero-section z-10" aria-hidden="true">
       <div
         className="binary-wall"
         ref={binaryWallRef}

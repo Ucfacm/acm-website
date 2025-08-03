@@ -67,10 +67,10 @@ const Hero = () => {
 
   return (
     <>
-      <div className="-translate-y-1/12 
-        relative flex flex-col items-start justify-center h-screen text-left max-sm:mx-2 lg:max-2xl:mx-24 max-lg:mx-12 max-lg:items-center max-lg:text-center  max-sm:px-6 2xl:pt-20">
-          <div>
-            <h1 className="font-catamaran max-sm:text-4xl text-5xl font-black md:text-7xl 2xl:text-8xl">
+      <div className="pointer-events-none -translate-y-1/12 
+        relative flex flex-col items-start justify-center h-screen text-left max-sm:mx-2 lg:max-2xl:mx-24 max-lg:mx-12 max-lg:items-center max-lg:text-center  max-sm:px-6 2xl:pt-20 z-20">
+          <div className="!pointer-events-auto">
+            <h1 className="font-catamaran max-sm:text-4xl text-5xl font-black text-shadow-lg text-shadow-black md:text-7xl 2xl:text-8xl">
               Association for<br />Computing Machinery
             </h1>
             <p className=" text-lg max-sm:text-sm md:text-2xl mt-4 font-bmono text-white 2xl:text-3xl 2xl:mt-8">
