@@ -14,7 +14,6 @@ const About = () => {
   return (
     <section className="text-white py-4 px-4 md:px-16 lg:px-24">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        {/* Text Section */}
         <div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             About <span className="text-yellow-400">ACM</span>
@@ -31,7 +30,6 @@ const About = () => {
           </p>
         </div>
 
-        {/* Photo Carousel Section */}
         <div className="relative">
           <AnimatedPhotoCarousel photos={photos} autoplay />
         </div>

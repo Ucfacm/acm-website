@@ -10,7 +10,7 @@ interface DiscordButtonProps extends React.HTMLAttributes<HTMLAnchorElement> {
 
 export const DiscordButton: React.FC<DiscordButtonProps> = ({
   href = "https://discord.gg/cYJWFBswq7",
-  label = "Discord",
+  label = "Join our Discord!",
   className,
   ...props
 }) => {
@@ -23,7 +23,7 @@ export const DiscordButton: React.FC<DiscordButtonProps> = ({
     >
       <button
         className={cn(
-          "group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-gray-300 bg-black/5 px-4 py-2 font-bmono text-sm font-medium text-neutral-200 backdrop-blur-xs cursor-pointer",
+          "group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-gray-300 bg-black/5 px-6 py-2 font-bmono text-sm font-medium text-neutral-200 backdrop-blur-xs cursor-pointer hover:scale-102",
           className
         )}
       >
