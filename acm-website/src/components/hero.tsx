@@ -67,7 +67,7 @@ const Hero = () => {
 
   return (
     <>
-      <div className="pointer-events-none -translate-y-1/12 
+      <div id="home" className="pointer-events-none -translate-y-1/12 
         relative flex flex-col items-start justify-center h-screen text-left max-sm:mx-2 lg:max-2xl:mx-24 max-lg:mx-12 max-lg:items-center max-lg:text-center  max-sm:px-6 2xl:pt-20 z-20">
           <div className="!pointer-events-auto">
             <h1 className="font-catamaran max-sm:text-4xl text-5xl font-black text-shadow-lg text-shadow-black md:text-7xl 2xl:text-8xl">
@@ -78,7 +78,7 @@ const Hero = () => {
                 <span className={`not-italic font-extralight ${cursorVisible ? "opacity-100" : "opacity-0"}`}>|</span>
               </span>
             </p>
-            <div className="mt-8 flex gap-4">
+            <div className="mt-8 max-lg:justify-center flex gap-4">
               <SpinningBorderButton className="hover:shadow-[0_0_25px_rgba(253,216,53,0.8)] hover:shadow-yellow-600/60 duration-200">
                 Register
               </SpinningBorderButton>

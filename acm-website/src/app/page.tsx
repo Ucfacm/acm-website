@@ -1,6 +1,7 @@
 import BinaryWall from '../components/binarywall';
 import Hero from '../components/hero';
 import About from '../components/about'
+import Navbar from '../components/navbar'
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
       </div>
   
       <div className="relative 2xl:mx-auto sm:w-fit">
+        <Navbar />
         <Hero />
         <About />
       </div>

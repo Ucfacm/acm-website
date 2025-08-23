@@ -12,21 +12,14 @@ const About = () => {
   ];
 
   return (
-    <section className="text-white py-4 px-4 md:px-16 lg:px-24">
+    <section id="about" className="text-white py-4 px-4 md:px-16 lg:px-24">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             About <span className="text-yellow-400">ACM</span>
           </h2>
           <p className="text-gray-300 font-mono leading-7">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit.
-            Quisque faucibus ex sapien vitae pellentesque sem placerat.
-            In id cursus mi pretium tellus duis convallis.
-            Tempus leo eu aenean sed diam urna tempor.
-            Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
-            Iaculis massa nisl malesuada lacinia integer nunc posuere.
-            Ut hendrerit semper vel class aptent taciti sociosqu.
-            Ad litora torquent per conubia nostra inceptos himenaeos.
+          The ACM UCF chapter fosters a community where students from all computer-related disciplines can socialize, learn, and grow throughout their degree journey. Our social events help members build lasting connections, while workshops offer hands-on learning and in-depth explanations. We also host long-term projects where members can develop real-world skills and see their efforts become tangible products. Monthly general body meetings feature industry guests, allowing members to connect with professionals and gain real-world insights. Over the past two years, our chapter has thrived, with growing membership and members achieving significant milestones in their degrees and careers. Join our Discord server today to learn more!
           </p>
         </div>
 
